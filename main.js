@@ -13,7 +13,7 @@ bot.on ('ready', () => {
 	console.log("Bot Is Ready !");
 })
 
-bot.login('process.env.TOKEN');
+bot.login('MzkxODk3NTEzNTE2NDY2MTk2.DRftPw.7A1L-YK_aXm8PJI3ocHSQJCGd2w');
 
 bot.on('message', message => {
     if (message.content === prefix + "IP"){
