@@ -1,12 +1,5 @@
 const Discord = require('discord.js');
-const low = require('lowdb')
-const FileSync = require('lowdb/adapters/FileSync')
 
-const adapter = new FileSync('database.json');
-const db = low(adapter);
-
-db.default({ test: []});
-   .write()
 
 var bot = new Discord.Client();
 var prefix = (".");
@@ -33,25 +26,6 @@ bot.on('message', message => {
       console.log("message IP Demmander");
     }
 
-    if(!message.content.startsWith(prefix)) return;
-    var args = message.content.substing(prefix.length).split(" ");
-
-
-    switch (args[0].toLowerCase()){
-
-   case "newstory":
-   var value = message.contrnt.substr(10);
-   var author = message.author.id;
-   console.log(value);
-   message.reply("Ajoute Un Texte Pour Un Test")
-
-   db.get('test')
-   .push(( id: number + 1, story_value: value, storyauthor: author));
-   .write();
-
-   break;
-
-    }   
 
   if (message.content === prefix + "help"){
     var help_embed = new Discord.RichEmbed()
